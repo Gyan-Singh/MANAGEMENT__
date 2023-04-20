@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 15px;
+    flex: 3;
+    cursor: pointer;
+
+}
+
+.app__nav-logo{
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.app__nav-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.app__nav-heading a{
+   
+text-decoration: none;
+}
+.app__nav-item_box{
+    display: flex;
+    flex: 4;
+}
+.loc{
+    display: flex;
+    margin:5px 15px;
+    height:60px;
+
+}
+.name{
+
+    font-size: 2.2rem;
+    color: #726277;
+    display: flex;
+    align-items: center;
+}
+.navbar{
+    display: flex;
+    align-items:center;
+    width: 100%;
+    margin:20px 0;
+    justify-content: space-between;
+
+}
+
+ul{
+    display: flex;
+    /* cursor: pointer; */
+    
+    
+}
+ul li{
+    list-style: none;
+    display: inline;
+    /* justify-content: space-between; */
+}
+ul li a{
+    text-decoration: none;
+    color: #726277;
+    margin: 0 20px;
+    padding: 0 20px;
+    /* height: 50px; */
+    /* justify-content: space-between; */
+    /* padding-left: 50px; */
+}
+ul li a:hover{
+    background-color: #eadfee;
+    color: #726277;
+}
+.btn{
+    /* height:50px */
+    padding: 0 20px;
+    background-color: white;
+    color: #726277;
+    border:none ;
+    cursor: pointer;
+    font-weight: 500;
+}
+.btn:hover{
+    opacity: 0.5;
+}
+
+/* .item1:hover{
+    
+} */
+.hotel{
+    /* display: flex; */
+    height:30rem;
+    width: 100%;
+    /* align-items:flex-start; */
+    /* justify-content:flex-start; */
+    /* flex-direction: column; */
+    
+    padding: 25px 0;
+    background: url('https://static.wixstatic.com/media/e2e604_e6de2ed5d64a4f3da3960e99371ad2ae~mv2.webp')no-repeat center center/cover;
+    /* opacity: 0.8; */
+    }
+
+.font_3{
+    color: white;
+    line-height: 3rem;
+    font-size: 3.45rem;
+    text-align: left;
+    padding: 20px 0;
+    margin-top:50px ;
+ 
+}
+h4{
+    color: white;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+.Hotel_img{
+    height: 70px;
+}
+input[type=text], select, textarea {
+    /* width: 100%; Full width */
+     padding: 2px 20px;
+    border: 1px solid transparent; 
+    border-radius: 5px;
+  
+    cursor: pointer;
+  
+
+  }
+  input{
+    cursor: pointer;
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  .Check-btn {
+    background-color: #1d72da;
+    color: white;
+    padding: 12px 8px;
+    /* margin: 10px 10px; */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 15px;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  .Check-btn:hover {
+    background-color: #2f8eed;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5%;
+    background-color: #ffffff;
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* margin: 0 15px; */
+
+    
+  }
+  form{
+    display: flex;
+    /* display: inline-block; */
+    /* margin:12px 60px; */
+    background-color:whitesmoke;
+    height: 8rem;
+    align-items: center;
+    /* width:50%; */
+    /* justify-content: center; */
+    text-align: center;
+    border: 1px solid rgb(131, 131, 131);
+
+
+    
+  }
+   label{
+    /* margin: 0 12px; */
+    display: flex;
+    text-align: center;
+    align-items: center;
+     /* display: inline-block;*/
+     }
+
+.options{
+    margin: 0 20px;
+    /* display: inline; */
+    /* display: flex; */
+}
+.pg-end{
+    display: flex;
+    background-color: #d0c1d5;
+    height: 18rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* text-align: start; */
+} 
+.info{
+color: white;
+font-size: 0.4rem;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+margin-left: 10px;
+
+/* display: inline; */
+/* margin:0 20px; */
+font-weight: bolder;
+
+}
+
+
+
+.copy{
+    margin-top: 30px;
+   /* width: 100%; */
+} 
+.fill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-left:10px; */
+    position: relative;
+    margin-left: 20px;
+    /* flex-direction: column; */
+}
+.fillinner{
+    display: flex;
+    flex-direction: row;
+}
+.details{
+    color: #726277;
+    margin:0 5px;
+    display: flex;
+    flex-direction: column;
+    /* display: inline; */
+    /* margin: 0 70px; */
+}
+#Message{
+    height: 19vh;
+    padding-top:2px ;
+    width: 13.2vw;
+}
+
+/* .msg{
+    text-align:start;
+} */
+.content{
+    padding-left:19px ;
+    height: 5.5vh;
+
+    /* width: 13.2vw; */
+    border: none;
+    margin-bottom: 5px;
+}
+
+#email{
+    /* border: 1px solid rgb(129, 128, 128); */
+  /* width: 13.5vw; */
+  border-radius: 5px;
+}
+.submit-btn{
+    width: 31vw;
+    height: 2.5rem;
+    background-color: #726277;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.submit-btn:hover{
+    background-color: #d0c1d5;
+
+  
+}
+.end{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: flex-start; */
+    margin-left: 30px;
+ 
+}
+.images{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.images a{
+    text-decoration: none;
+}
+
+.imagesinner{
+    height: 3rem;
+    margin-left:20px;
+}
+.contact{
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* .det{
+    display: flex;
+} */
+
+
+
+
+

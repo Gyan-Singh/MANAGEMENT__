@@ -1,0 +1,119 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block title %}
+    {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'bootstrap\bootstrap.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'bootstrap\Hotel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap\style.css' %}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <div class="navbar">
+                <div class="menu">
+                    <ul>
+                        <li><a href="/hotel/home">Home</a></li>
+                        {% if user.is_staff %}
+                    <li class="nav-item active">
+                        <a class="nav-link text-bold" href="/hotel/staff/panel">Dashboard </a>
+                    </li>
+                    {% elif user.is_staff == False and user.is_authenticated %}
+                    <li class="nav-item active">
+                            <a class="nav-link text-bold" href="/hotel/user/bookings">My Bookings </a>
+                        </li>
+                    
+                    
+                    {% endif %}
+                    {% if user.is_staff %}
+                    <li class="nav-item active">
+                            <a class="nav-link text-bold" href="/hotel/staff/allbookings">All Bookings </a>
+                        </li>
+                    {% endif %}
+                    
+                    <!--<li><a href="#">My Booking</a></li>-->
+                        <li><a href="/hotel/about">About</a></li>
+                        <li><a href="/hotel/contact">Contact</a></li>
+                    </ul>
+                    {% if user.is_authenticated %}
+                      <button class="btn btn-group bg-light" data-toggle="modal" data-target="#forlogin">
+                      <button class="btn btn-group bg-light" data-toggle="modal" data-target="#forlogin">
+                       Hello, {{request.user}}
+                       <a href="/hotel/logout" class="nav-link">
+                    <button class="btn btn-group bg-warning" data-toggle="modal" data-target="#forlogin">
+                        Logout
+                    </button></a>&nbsp; &nbsp;
+                    </button>
+                
+                {% else %}
+                   
+                    <a href="/hotel/user" class="nav-link">
+                    <button class="btn btn-group bg-warning font-weight-bold" data-toggle="modal" data-target="#forlogin">
+                        User Login
+                    </button></a>
+                <a href="/hotel/staff" class="nav-link">
+                    <button class="btn btn-group bg-warning font-weight-bold">
+                        Staff Login
+                    </button></a>
+                {% endif %}
+
+                </div>
+                <!--<div class="signup">
+                    <a href="#">Login</a>
+                </div>-->
+            </div>
+            </nav>
+            <div class="hotel">
+                <h3 class="font_3"> "A HOTEL ROOM IS MY OWN <br> LITTLE WORLD, WHERE I <br> CAN BE WHOEVER I WANT <br> TO
+                BE" </h3>
+                <h4>Dalai Lama</h4>
+            </div>
+            <!-- <div class="bg">
+            <div class="heading">
+                <img class="Hotel_img" src="https://static.wixstatic.com/media/e2e604_240e1815dfd340c5a9c2f9ccdd13cfe9~mv2.png/v1/fill/w_100,h_100,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/fotor_2023-4-15_0_57_48.png" alt="">
+                
+            </div> -->
+        </div>
+    </div>
+    <!--Header Section Ends here-->
+    
+    
+    
+        {% for message in messages %}
+             <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+             </button>
+            </div>
+        {% endfor %}
+    
+    {% block body %}
+    
+    {% endblock body %}
+        
+   
+    
+
+
+
+
+
+    
+</body>
+{% block js %}
+{% endblock js %}
+</html>
