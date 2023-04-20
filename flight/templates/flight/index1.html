@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel Website</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="navbar">
+		<div class="logo">
+			<h1>YOLO</h1>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Places</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Booking</a></li>
+			</ul>
+		</div>
+		<div class="signup">
+			<a href="#">Login</a>
+		</div>
+	</div>
+	<div class="body">
+		<div class="heading">
+			<h1>Travel With Us</h1>
+			<br>
+			<p>Travel the world with us! Book your next adventure on our website and let your wanderlust take flight </p>
+			<br>
+			<br>
+		
+		</div>
+		<div class="tours">
+			<div class="places">
+				<h2>Flight</h2>
+				<img src="{% static 'img/flight.jpg' %}" style="width: 300px; height: 250px; border-radius: 12px;">
+				<br>
+				<br>
+				<a href="{% url 'index' %}">Book Now </a>
+			</div>
+			<div class="places">
+				<h2>Train</h2>
+				<img src="{% static 'img/train.jpg' %}" style="width: 300px; height: 250px; border-radius: 12px;">
+				<br>
+				<br>
+				<a href="#">Book Now </a>
+			</div>
+			<div class="places">
+				<h2>Hotel</h2>
+				<img src="{% static 'img/hotel.jpg' %}" style="width: 300px; height: 250px; border-radius: 12px;">
+				<br>
+				<br>
+				<a href="#">Book Now </a>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="footer">
+		<a href="#">Copyright</a>
+		<a href="#">Terms and Conditions</a>
+		<a href="#">Privacy Policy</a>
+		<a href="#">Cookies</a>
+		<a href="#">Complaints</a>
+	</div> -->
+</body>
+</html>
